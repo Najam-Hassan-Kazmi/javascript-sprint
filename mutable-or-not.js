@@ -1,2 +1,2 @@
 let cartTotal = 1234
-const taxRate
+const taxRate = 123
