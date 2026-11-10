@@ -13,11 +13,14 @@ function printPrettyDate(x) {
         meridiem = "PM"
         hours = hours - 12
     }
+   
+    let minutes = x.getMinutes()
+    let seconds = x.getSeconds()
 
     if (hours<10) {
         hours = "0" + hours
     }
-    
+
     if (minutes<10) {
         minutes = "0" + minutes
     }
@@ -25,9 +28,6 @@ function printPrettyDate(x) {
     if (seconds<10) {
         seconds = "0" + seconds
     }
-    
-    let minutes = x.getMinutes()
-    let seconds = x.getSeconds()
 
     console.log("Today is " + dayNames[day] + ", " + monthNames[month] + " " + date + ", " + year + ", and the time is " + hours + ":" + minutes + ":" + seconds + " " + meridiem + ".")
 }
