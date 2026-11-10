@@ -1,8 +1,6 @@
 let person = {
     isMarried: false,
     age: 23,
-    middleName: "Hassan",
+    middleName: undefined,
     firstName: "Najam"
 }
-
-delete person.middleName
