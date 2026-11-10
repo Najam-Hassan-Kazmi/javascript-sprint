@@ -13,6 +13,11 @@ function printPrettyDate(x) {
         meridiem = "PM"
         hours = hours - 12
     }
+
+    if (hours<10) {
+        hours = "0" + hours
+    }
+
     let minutes = x.getMinutes()
     let seconds = x.getSeconds()
 
