@@ -4,7 +4,8 @@ function sumNestedArray(arr) {
         if (typeof value === "number") {
             total = total + value
         }
-    }
 
+        console.log(total)
+    }
     return total
 }

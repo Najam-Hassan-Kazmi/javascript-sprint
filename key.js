@@ -11,7 +11,7 @@ function getValueFromKey(obj, key) {
 function addKeyValuePairs(obj, pairs) {
     const newObj = JSON.parse(JSON.stringify(obj))
 
-    for  (cost [key, value] of Object.entries(obj)) {
+    for  (const [key, value] of Object.entries(obj)) {
         newObj.key = value
     }
 
