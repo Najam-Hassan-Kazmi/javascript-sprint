@@ -16,7 +16,7 @@ function printPrettyDate(x) {
     let minutes = x.getMinutes()
     let seconds = x.getSeconds()
 
-    console.log("Today is " + day + ", " + month + " " + date + ", " + year + ", and the time is " + hours + ":" + minutes + ":" + seconds + " " + meridiem)
+    console.log("Today is " + dayNames[day] + ", " + monthNames[month] + " " + date + ", " + year + ", and the time is " + hours + ":" + minutes + ":" + seconds + " " + meridiem)
 }
 
 printPrettyDate(Date.now())
