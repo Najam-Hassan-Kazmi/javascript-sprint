@@ -1,11 +1,13 @@
 function sumNestedArray(arr) {
-    let total = 0
-    for (const value of arr.flat()) {
+    let sum = 0
+    for (const value of arr.flat(Infinity)) {
         if (typeof value === "number") {
-            total = total + value
+            sum = sum + value
         }
 
-        console.log(total)
+        console.log(sum)
     }
-    return total
+    return sum
 }
+
+console.log(sumNestedArray(["r6t", "3Lc", 47, 89, "J2B", 27, 79, 113]))
