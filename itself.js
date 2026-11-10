@@ -5,10 +5,10 @@ const sender = {
 
 const deliveryPackage = {
     contents: "porridge",
-    sender: Array.from(sender)
+    sender: sender
 }
 
 const trackingInfo = {
-    sender: Array.from(sender),
+    sender: sender,
     status: "in transit"
 }

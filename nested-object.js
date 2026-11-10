@@ -3,9 +3,7 @@ let userProfile = {
     person: {
         isMarried: true,
         age: 23,
-        middleName: "Hassan",
+        middleName: undefined,
         firstName: "Najam",
     }
 }
-
-delete userProfile.person.middleName

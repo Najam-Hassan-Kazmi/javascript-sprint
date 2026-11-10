@@ -1,23 +1,26 @@
-function getFirstElement(str, arr = []) {
-    if (arr.length === 0) {
-        return str[0]
-    } else {
-        return arr[0]
+function getFirstElement(x) {
+    if (x.length === 0) {
+        return 0
     }
+    
+    return x[0]
 }
 
-function getLastElement(str, arr = []) {
-    if (arr === []) {
-        return str[str.length-1]
-    } else {
-        return arr[arr.length-1]
+function getLastElement(str) {
+    if (x.length === 0) {
+        return 0
     }
+    
+    return x[x.length-1]
 }
 
-function getElementByIndex(str, arr = [], i) {
-    if (arr === []) {
-        return str[i]
-    } else {
-        return arr[i]
+function getElementByIndex(str, i) {
+    if (typeof i !== int) {
+        return 0
     }
+    if (x.length === 0) {
+        return 0
+    }
+    
+    return x[i]
 }

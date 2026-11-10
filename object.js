@@ -5,4 +5,4 @@ let person = {
     firstName: "Najam"
 }
 
-delete person[2]
+delete person.middleName

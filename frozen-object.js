@@ -1,9 +1,8 @@
 let obj = {
     isMarried: false,
     age: 23,
-    middleName: "Hassan",
-    firstName: "Najam"
+    middleName: undefined,
+    name: "Najam"
 }
 
-delete obj.middleName
 Object.freeze(obj)
