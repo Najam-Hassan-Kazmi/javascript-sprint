@@ -11,9 +11,26 @@ function getValueFromKey(obj, key) {
 function addKeyValuePairs(obj, pairs) {
     const newObj = JSON.parse(JSON.stringify(obj))
 
+
     for  (const [key, value] of Object.entries(pairs)) {
-        newObj.key = value
+        newObj[key] = value
     }
 
     return newObj
 }
+
+const location = {
+  city: 'Tallinn',
+  country: 'Estonia',
+  name: {
+    first: "najam",
+    second: "ul",
+    last: "hassan"
+  }
+}
+
+const a = {...location}
+
+a.name.last = "Finland"
+
+console.log(addKeyValuePairs(location, {airports: [ 'TLL' ], 1: 3, add: "noadd", sub: 189}))
