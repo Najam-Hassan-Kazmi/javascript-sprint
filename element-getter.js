@@ -15,7 +15,7 @@ function getLastElement(x) {
 }
 
 function getElementByIndex(x, i) {
-    if (typeof i !== int) {
+    if (typeof i !== "number") {
         return undefined
     }
     if (x.length === 0) {
