@@ -12,6 +12,10 @@ function printPrettyDate(x) {
     if (hours > 12) {
         meridiem = "PM"
         hours = hours - 12
+    } else if (hours == 0) {
+        hours = 12
+    } else if (hours == 12) {
+        meridiem = "PM"
     }
    
     let minutes = x.getMinutes()
@@ -33,4 +37,3 @@ function printPrettyDate(x) {
 }
 
 printPrettyDate(Date.now())
-
