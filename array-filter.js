@@ -3,21 +3,26 @@ function filterOutOddNumbers(arr) {
 }
 
 function filterObjectsByNameLength(arr, limit) {
-    return arr.filter((e) => e.Name.length <= limit)  
+    return arr.filter((e) => {
+        console.log(e.Name.length)
+        if (e.Name.length <= limit) {
+            return e
+        }
+    })  
 }
 
 function compoundFilter(arr) {
     let result = arr.filter((product) => {
-        let ok = []
         if ((typeof(product.code) == "string") && (product.code.length > 5)) {
             if (!product.code.includes("special")) {
                 if (product.price > 50) {
-                    if (location != "Underground") {
+                    if (product.location != "Underground") {
                         return product
                     }
                 }
             }
         }
-         
     })
+
+    return result
 }
