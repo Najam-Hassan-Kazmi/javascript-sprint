@@ -6,3 +6,5 @@ class Square extends Rectangle {
     this.side = side
   }
 }
+
+module.exports = { Square, square, rectangle }

@@ -16,3 +16,7 @@ class Triangle {
     return this.sideA + this.sideB + this.sideC
   }
 }
+
+const triangle = new Triangle(3, 4, 5)
+
+module.exports = { Triangle, triangle }

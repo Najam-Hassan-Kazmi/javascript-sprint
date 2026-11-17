@@ -13,6 +13,6 @@ class Rectangle {
   }
 }
 
-const rectangle = new Rectangle(5, 3);
+const rectangle = new Rectangle(5, 3)
 
-module.exports = { Rectangle, rectangle };
+module.exports = { Rectangle, rectangle }
