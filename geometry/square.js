@@ -8,5 +8,6 @@ class Square extends Rectangle {
 }
 
 const square = new Square(4);
+const rectangle = new Rectangle(5, 3)
 
 module.exports = { Square, square, rectangle }
