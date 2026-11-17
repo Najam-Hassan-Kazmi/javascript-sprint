@@ -14,10 +14,15 @@ const shoppingBasket = [
 console.log(getTotalFromShoppingBasket(shoppingBasket))
 
 function getAverageAge(people) {
-    let sum = 0
-    people.forEach((p) => sum = sum + p.age)
+  
+  if (people.length === 0) {
+    return 0
+  }
+
+  let sum = 0
+  people.forEach((p) => sum = sum + p.age)
     
-    return sum / people.length
+  return sum / people.length
 }
 
 const people = [
@@ -31,10 +36,18 @@ console.log(getAverageAge(people))
 
 
 function concatenateObjects(obj) {
-    const result = {
-        
-    }
+    const result = {}
     for (const[key, value] in obj) {
         
     }
 }
+
+const objects = [
+  { key: "a", value: 1 },
+  { key: "b", value: 2 },
+  { key: "a", value: 3 },
+  { key: "c", value: 4 },
+  { key: "b", value: 5 },
+]
+
+console.log(concatenateObjects(objects))
