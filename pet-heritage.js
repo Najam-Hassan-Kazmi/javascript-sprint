@@ -6,7 +6,7 @@ class Pet {
     }
 
     makeSound() {
-        console.log("I am a ", this.species)
+        console.log(`I am a ${this.species}`)
     }
 }
 
@@ -18,7 +18,7 @@ class Dog extends Pet {
     }
 
     fetch() {
-        console.log(this.name, " is fetching its ", this.favoriteToy)
+        console.log(`${this.name} is fetching its ${this.favoriteToy}`)
     }
 }
 
@@ -30,6 +30,6 @@ class Cat extends Pet {
     }
 
     purr() {
-        console.log(this.name, " purrs on the ", this.favoriteNapSpot)
+        console.log(`${this.name} purrs on the ${this.favoriteNapSpot}`)
     }
 }
