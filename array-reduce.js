@@ -38,8 +38,8 @@ console.log(getAverageAge(people))
 function concatenateObjects(arr) {
   const result = {}
 
-  for ({k, value} of arr) {
-    (result[k] ??= []).push(value)
+  for (const {key, value} of arr) {
+    (result[key] ??= []).push(value)
   }
 
   return result
