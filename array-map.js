@@ -13,7 +13,7 @@ const data = [
   ["city", "New York"],
 ];
 
-console.log(convert2DArrayToObjectArray(data))
+// console.log(convert2DArrayToObjectArray(data))
 // _____________________________
 
 function convertArrayOfObjectsToStrings(arr) {
@@ -38,14 +38,17 @@ const objects = [
   { name: "Bob", age: 25, city: "Los Angeles" },
 ]
 
-console.log(convertArrayOfObjectsToStrings(objects))
+// console.log(convertArrayOfObjectsToStrings(objects))
 // ________________________________
 
 function concatenateStrings(arr, limit) {
-    const result = arr.map((s) => s.length > 5 ? s.slice(0, limit) + "..." : s)
+    const result = arr.map((s) => s.length > limit ? s.slice(0, limit) + "..." : s)
     return result
 }
 
 const strings = ["apple", "banana", "kiwi", "orange", "pineapple"];
 
 console.log(concatenateStrings(strings, 5))
+
+
+// expression ? statement : statement ;
