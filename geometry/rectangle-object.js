@@ -1,4 +1,4 @@
-const rectObj = {
+export const rectObj = {
   width: 50,
   height: 30,
 
@@ -9,6 +9,4 @@ const rectObj = {
   perimeter() {
     return 2 * (this.width + this.height)
   },
-}
-
-module.exports = { rectObj }
+};
