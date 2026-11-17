@@ -12,3 +12,5 @@ class Rectangle {
     return 2 * (this.width + this.height)
   }
 }
+
+module.exports = { Rectangle, rectangle };
