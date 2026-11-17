@@ -35,12 +35,17 @@ const people = [
 console.log(getAverageAge(people))
 
 
-function concatenateObjects(obj) {
-    const result = {}
-    for (const[key, value] in obj) {
-        
-    }
+function concatenateObjects(arr) {
+  const result = {}
+
+  for ({key, value} of arr) {
+    (result[key] ??= []).push(value)
+  }
+
+  return result
+
 }
+
 
 const objects = [
   { key: "a", value: 1 },
@@ -51,3 +56,18 @@ const objects = [
 ]
 
 console.log(concatenateObjects(objects))
+
+
+
+
+
+
+// arr = {1:2,3:45,6:1,77:4}
+
+// console.log("Hey", Object.entries(arr).map((e)=> {
+//   if (e > 5) {
+//     return e
+//   } else {
+//     return "No"
+//   }
+// }))
