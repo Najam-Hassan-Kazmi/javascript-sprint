@@ -9,4 +9,4 @@ export const rectObj = {
   perimeter() {
     return 2 * (this.width + this.height)
   },
-};
+}
