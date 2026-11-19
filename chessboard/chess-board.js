@@ -3,6 +3,10 @@ function initializeChessboard() {
 
 
     const body = document.body
+
+    const wrap = document.createElement("div")
+    wrap.classList.add("chessboard")
+    body.append(wrap)
     let previous
 
     for (let i = 1; i <= 8; i++) {
@@ -24,14 +28,20 @@ function initializeChessboard() {
                 }
                 previous = div
                 div.dataset.color = "red"
+
+                // if (previous) {
+                //     if (previous === div) {
+                //         previous.dataset.color = previous.dataset.original
+                //     }
+                // }
             })
 
 
-            body.append(div)
+            wrap.append(div)
         }
 
         const lineBreaker = document.createElement("br")
-        body.append(lineBreaker)
+        wrap.append(lineBreaker)
 
     }
 
