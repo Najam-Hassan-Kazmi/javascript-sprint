@@ -23,17 +23,19 @@ function initializeChessboard() {
             }
 
             div.addEventListener("click", (e) => {
+
+                let sameDiv = previous === div
+
                 if (previous) {
                     previous.dataset.color = previous.dataset.original
                 }
+
                 previous = div
                 div.dataset.color = "red"
 
-                // if (previous) {
-                //     if (previous === div) {
-                //         previous.dataset.color = previous.dataset.original
-                //     }
-                // }
+                if (sameDiv) {
+                    previous.dataset.color = previous.dataset.original
+                }
             })
 
 
