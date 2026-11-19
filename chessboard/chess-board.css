@@ -1,0 +1,18 @@
+.square {
+    display: inline-block;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 100px;
+}
+
+[data-color="black"] {
+    background-color: black;
+}
+
+[data-color="white"] {
+    background-color: white;
+}
+
+[data-color="red"] {
+    background-color: red;
+}
