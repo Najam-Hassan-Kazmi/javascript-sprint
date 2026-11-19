@@ -3,7 +3,7 @@ function getElementsByTag(tagName) {
 }
 
 function getElementsByClassName(className) {
-    return document.querySelectorAll(className)
+    return document.getElementsByClassName(className)
 }
 
 function getElementById(id) {
@@ -12,12 +12,11 @@ function getElementById(id) {
 
 function getElementsByAttribute(attribute, attributeValue) {
 
-    let parameter
     if (attributeValue === undefined) {
-        parameter = "[" + attribute + "]"
+        let parameter = "[" + attribute + "]"
+        return document.querySelectorAll(parameter)
     } else {
-        parameter = "[" + attribute + "=" + "]"
+        let parameter = "[" + attribute + "=" + "]"
+        return document.querySelectorAll(parameter)
     }
-
-    return document.querySelectorAll(parameter)
 }
