@@ -1,10 +1,9 @@
 
 function initializeChessboard() {
 
+
     const body = document.body
     let previous
-    chessBoardDiv = document.createElement("div")
-    chessBoardDiv.setAttribute("class", "chessboard")
 
     for (let i = 1; i <= 8; i++) {
         for (let j = 1; j <= 8; j++) {
@@ -28,7 +27,7 @@ function initializeChessboard() {
             })
 
 
-            div.append(div)
+            body.append(div)
         }
 
         const lineBreaker = document.createElement("br")
@@ -38,4 +37,4 @@ function initializeChessboard() {
 
 }
 
-// initializeChessboard()
+initializeChessboard()
