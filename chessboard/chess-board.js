@@ -1,5 +1,5 @@
 
-function initializedChessboard() {
+function initializeChessboard() {
 
     const body = document.body
     let previous
@@ -37,3 +37,5 @@ function initializedChessboard() {
     }
 
 }
+
+// initializeChessboard()
