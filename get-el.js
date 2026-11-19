@@ -16,7 +16,7 @@ function getElementsByAttribute(attribute, attributeValue) {
         let parameter = "[" + attribute + "]"
         return document.querySelectorAll(parameter)
     } else {
-        let parameter = "[" + attribute + "=" + "]"
+        let parameter = "[" + attribute + "=" + attributeValue + "]"
         return document.querySelectorAll(parameter)
     }
 }
