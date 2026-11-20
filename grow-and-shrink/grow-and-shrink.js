@@ -24,10 +24,23 @@ for (let ch = 0; ch < 26; ch++) {
     div.style.fontSize = currentSize + "px"
     letterDiv.append(div)
     ch = ch.codePointAt(0) - 97
+
+    div.addEventListener("click", () => {
+        console.log("Clicked")
+        let selected = letterDiv.querySelector(".selected")
+        let newSelected = div
+        selected.classList.remove("selected")
+        selected.style.fontWeight = "normal"
+
+        newSelected.classList.add("selected")
+        newSelected.style.fontWeight = "bold"
+
+    })
+
 }
 
 const prev = document.createElement("button")
-prev.id = "previous"
+prev.id = "prev"
 prev.innerText = "<"
 prev.addEventListener("click", () => {
     let selected = letterDiv.querySelector(".selected")
@@ -41,6 +54,7 @@ prev.addEventListener("click", () => {
 
     selected.style.fontWeight = "normal"
     newSelected.style.fontWeight = "bold"
+
 })
 
 const next = document.createElement("button")
@@ -50,12 +64,10 @@ next.addEventListener("click", () => {
     let selected = letterDiv.querySelector(".selected")
     selected.classList.remove("selected")
     let newId = selected.id.codePointAt(0) + 1
-    console.log(newId)
     if (newId > 122) {
         newId -= 26
     }
     let newSelected = letterDiv.querySelector("#" + String.fromCodePoint(newId))
-    console.log(newSelected.id)
     newSelected.classList.add("selected")
 
     selected.style.fontWeight = "normal"
