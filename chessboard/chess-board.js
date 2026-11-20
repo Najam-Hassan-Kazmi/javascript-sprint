@@ -22,7 +22,7 @@ function initializeChessboard() {
                 div.dataset.original = "black"
             }
 
-            div.addEventListener("click", (e) => {
+            div.addEventListener("click", () => {
 
                 let sameDiv = previous === div
 
