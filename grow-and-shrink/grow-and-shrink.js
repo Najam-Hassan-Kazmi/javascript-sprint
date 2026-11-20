@@ -8,7 +8,7 @@ buttonDiv.classList.add("button-container")
 
 body.append(letterDiv, buttonDiv)
 
-let selectedCh
+let currentSize = 14
 
 for (let ch = 0; ch < 26; ch++) {
     ch = String.fromCodePoint(97 + ch)
@@ -17,14 +17,14 @@ for (let ch = 0; ch < 26; ch++) {
     div.setAttribute("class", "letter")
     if (div.id === "f") {
         div.classList.toggle("selected")
+        div.style.fontWeight = "bold"
     }
+    div.dataset.size = "14"
     div.innerText = ch.toUpperCase()
+    div.style.fontSize = currentSize + "px"
     letterDiv.append(div)
     ch = ch.codePointAt(0) - 97
 }
-
-let selected = letterDiv.querySelector(".selected")
-selected.style.fontWeight = "bold"
 
 const prev = document.createElement("button")
 prev.innerText = "<"
@@ -37,6 +37,9 @@ prev.addEventListener("click", () => {
     }
     let newSelected = letterDiv.querySelector("#" + String.fromCodePoint(newId))
     newSelected.classList.add("selected")
+
+    selected.style.fontWeight = "normal"
+    newSelected.style.fontWeight = "bold"
 })
 
 const next = document.createElement("button")
@@ -45,17 +48,36 @@ next.addEventListener("click", () => {
     let selected = letterDiv.querySelector(".selected")
     selected.classList.remove("selected")
     let newId = selected.id.codePointAt(0) + 1
-    if (newId > 97) {
+    console.log(newId)
+    if (newId > 122) {
         newId -= 26
     }
     let newSelected = letterDiv.querySelector("#" + String.fromCodePoint(newId))
     console.log(newSelected.id)
     newSelected.classList.add("selected")
+
+    selected.style.fontWeight = "normal"
+    newSelected.style.fontWeight = "bold"
 })
 
 const inc = document.createElement("button")
 inc.innerText = "+"
+inc.addEventListener("click", () => {
+    let selected = letterDiv.querySelector(".selected")
+    currentSize = Number(selected.dataset.size)
+    if (currentSize < 26) currentSize += 2
+    selected.style.fontSize = currentSize + "px"
+    selected.dataset.size = currentSize
+})
+
 const dec = document.createElement("button")
 dec.innerText = "-"
+dec.addEventListener("click", () => {
+    let selected = letterDiv.querySelector(".selected")
+    currentSize = Number(selected.dataset.size)
+    if (currentSize > 10) currentSize -= 2
+    selected.style.fontSize = currentSize + "px"
+    selected.dataset.size = currentSize
+})
 
 buttonDiv.append(prev, next, inc, dec)
