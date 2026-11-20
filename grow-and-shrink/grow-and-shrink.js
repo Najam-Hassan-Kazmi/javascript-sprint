@@ -15,7 +15,7 @@ for (let ch = 0; ch < 26; ch++) {
     const div = document.createElement("div")
     div.setAttribute("id", ch)
     div.setAttribute("class", "letter")
-    if (div.id === "f") {
+    if (div.id === "a") {
         div.classList.toggle("selected")
         div.style.fontWeight = "bold"
     }
@@ -27,6 +27,7 @@ for (let ch = 0; ch < 26; ch++) {
 }
 
 const prev = document.createElement("button")
+prev.id = "previous"
 prev.innerText = "<"
 prev.addEventListener("click", () => {
     let selected = letterDiv.querySelector(".selected")
@@ -43,6 +44,7 @@ prev.addEventListener("click", () => {
 })
 
 const next = document.createElement("button")
+next.id = "next"
 next.innerText = ">"
 next.addEventListener("click", () => {
     let selected = letterDiv.querySelector(".selected")
@@ -61,6 +63,7 @@ next.addEventListener("click", () => {
 })
 
 const inc = document.createElement("button")
+inc.id = "increase"
 inc.innerText = "+"
 inc.addEventListener("click", () => {
     let selected = letterDiv.querySelector(".selected")
@@ -71,6 +74,7 @@ inc.addEventListener("click", () => {
 })
 
 const dec = document.createElement("button")
+dec.id = "decrease"
 dec.innerText = "-"
 dec.addEventListener("click", () => {
     let selected = letterDiv.querySelector(".selected")
