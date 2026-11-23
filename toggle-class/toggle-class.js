@@ -55,8 +55,8 @@ const hButton = document.createElement("button")
 hButton.innerText = "H"
 hButton.id = "highlight"
 hButton.addEventListener("click", () => {
-    p.classList.toggle("highlight")
-    const classCheck = contentDiv.querySelector(".highlight")
+    contentDiv.classList.toggle("highlight")
+    const classCheck = body.querySelector(".highlight")
     if (classCheck) {
         contentDiv.style.backgroundColor = "yellow"
     } else {
