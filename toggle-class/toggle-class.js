@@ -7,7 +7,7 @@ p.innerText = "code"
 contentDiv.append(p)
 
 const buttonsDiv = document.createElement("div")
-buttonsDiv.id = "controls"
+buttonsDiv.classList.add("controls")
 
 body.append(contentDiv, buttonsDiv)
 
