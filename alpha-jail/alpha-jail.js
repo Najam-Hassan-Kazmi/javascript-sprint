@@ -35,12 +35,13 @@ document.addEventListener("keydown", (e) => {
         let color = document.documentElement.style.getPropertyValue("--white")
         keyDiv.style.backgroundColor = color
         keyDiv.style.position = "absolute"
-        keyDiv.style.left = (cY - keyDiv.clientWidth / 2) + "px"
-        keyDiv.style.top = (cX - keyDiv.clientHeight / 2) + "px"
+        keyDiv.style.left = (cY) + "px"
+        keyDiv.style.top = (cX) + "px"
+        keyDiv.style.transform = "translate(-50%, -50%)"
         // keyDiv.style.alignItems = "center"
 
         div.append(keyDiv)
-        // keyDiv.style.fontSize = "50px"
+        keyDiv.style.fontSize = "50px"
     } else if (ch == "Escape") {
         const elements = document.querySelectorAll(".character")
         elements.forEach(e => {
@@ -53,8 +54,8 @@ document.addEventListener("pointermove", (e) => {
     cX = e.clientY, cY = e.clientX
     const following = document.querySelector(".follow")
     if (following) {
-        following.style.left = (cY - following.clientWidth / 2) + "px"
-        following.style.top = (cX - following.clientHeight / 2) + "px"
+        following.style.left = cY + "px"
+        following.style.top = cX + "px"
 
         if (cY > window.innerWidth / 2) {
             color = document.documentElement.style.getPropertyValue("--orange")
