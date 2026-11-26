@@ -40,7 +40,7 @@ document.addEventListener("keydown", (e) => {
         // keyDiv.style.alignItems = "center"
 
         div.append(keyDiv)
-        keyDiv.style.fontSize = "50px"
+        // keyDiv.style.fontSize = "50px"
     } else if (ch == "Escape") {
         const elements = document.querySelectorAll(".character")
         elements.forEach(e => {
