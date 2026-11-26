@@ -38,6 +38,11 @@ document.addEventListener("keydown", (e) => {
         keyDiv.style.top = cX + "px"
         div.append(keyDiv)
         keyDiv.style.fontSize = "25px"
+    } else if (ch == "Escape") {
+        const elements = document.querySelectorAll("#character")
+        elements.forEach(e => {
+            e.remove()
+        })
     }
 })
 
@@ -59,7 +64,6 @@ document.addEventListener("pointermove", (e) => {
             color = document.documentElement.style.getPropertyValue("--white")
             following.style.backgroundColor = color
         }
-
     }
 })
 
