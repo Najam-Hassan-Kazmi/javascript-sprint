@@ -32,16 +32,26 @@ document.addEventListener("keydown", (e) => {
         }
         keyDiv.classList.add("character", "follow")
         keyDiv.innerText = e.key
-        let color = document.documentElement.style.getPropertyValue("--white")
-        keyDiv.style.backgroundColor = color
         keyDiv.style.position = "absolute"
         keyDiv.style.left = (cY) + "px"
         keyDiv.style.top = (cX) + "px"
         keyDiv.style.transform = "translate(-50%, -50%)"
-        // keyDiv.style.alignItems = "center"
 
         div.append(keyDiv)
         keyDiv.style.fontSize = "50px"
+
+        if (cY > window.innerWidth / 2) {
+            color = document.documentElement.style.getPropertyValue("--orange")
+            following.style.backgroundColor = color
+            following.classList.add("trapped")
+
+        } else if (cY <= window.innerWidth / 2 && following.classList.contains("trapped")) {
+            following.classList.remove("follow")
+        } else {
+            color = document.documentElement.style.getPropertyValue("--white")
+            following.style.backgroundColor = color
+        }
+
     } else if (ch == "Escape") {
         const elements = document.querySelectorAll(".character")
         elements.forEach(e => {
@@ -49,7 +59,6 @@ document.addEventListener("keydown", (e) => {
         })
     }
 })
-
 
 document.addEventListener("pointermove", (e) => {
     cX = e.clientY, cY = e.clientX
