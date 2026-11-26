@@ -4,6 +4,7 @@ body.style.margin = "0px"
 
 const div = document.createElement("div")
 div.style.display = "flex"
+div.style.alignItems = "center"
 
 const freeDiv = document.createElement("div")
 freeDiv.classList.add("outside", "zone")
@@ -26,7 +27,6 @@ document.addEventListener("keydown", (e) => {
 
     if (ch >= "a" && ch <= "z") {
         const keyDiv = document.createElement("div")
-        keyDiv.id = "character"
         const previous = document.querySelector(".follow")
         if (previous) {
             previous.classList.remove("follow")
@@ -41,7 +41,7 @@ document.addEventListener("keydown", (e) => {
         div.append(keyDiv)
         keyDiv.style.fontSize = "25px"
     } else if (ch == "Escape") {
-        const elements = document.querySelectorAll("#character")
+        const elements = document.querySelectorAll(".character")
         elements.forEach(e => {
             e.remove()
         })
