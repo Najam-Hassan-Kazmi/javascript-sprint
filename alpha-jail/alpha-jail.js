@@ -1,5 +1,7 @@
 const body = document.body
 
+body.style.margin = "0px"
+
 const div = document.createElement("div")
 div.style.display = "flex"
 
@@ -37,7 +39,7 @@ document.addEventListener("keydown", (e) => {
         keyDiv.style.left = cY + "px"
         keyDiv.style.top = cX + "px"
         div.append(keyDiv)
-        // keyDiv.style.fontSize = "25px"
+        keyDiv.style.fontSize = "25px"
     } else if (ch == "Escape") {
         const elements = document.querySelectorAll("#character")
         elements.forEach(e => {
