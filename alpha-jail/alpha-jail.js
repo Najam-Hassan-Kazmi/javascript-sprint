@@ -54,7 +54,7 @@ document.addEventListener("pointermove", (e) => {
     const following = document.querySelector(".follow")
     if (following) {
         following.style.left = (cY - following.clientWidth / 2) + "px"
-        following.style.top = (cX - following.clientWidth / 2) + "px"
+        following.style.top = (cX - following.clientHeight / 2) + "px"
 
         if (cY > window.innerWidth / 2) {
             color = document.documentElement.style.getPropertyValue("--orange")
