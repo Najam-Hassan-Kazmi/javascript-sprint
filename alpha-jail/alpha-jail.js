@@ -50,6 +50,7 @@ document.addEventListener("keydown", (e) => {
     }
 })
 
+
 document.addEventListener("pointermove", (e) => {
     cX = e.clientY, cY = e.clientX
     const following = document.querySelector(".follow")
