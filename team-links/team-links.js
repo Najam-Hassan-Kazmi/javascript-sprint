@@ -1,14 +1,13 @@
 const body = document.body
 const ul = document.createElement("ul")
+const previous = document.querySelector("#team-list-nav")
+if (previous) {
+    previous.remove()
+}
 ul.id = "team-list-nav"
 ul.classList.add("team-links")
 
 function createLinks(teams) {
-
-    const previous = document.querySelector("#team-list-nav")
-    if (previous) {
-        previous.remove()
-    }
 
     teams.forEach((team) => {
         const li = document.createElement("li")
