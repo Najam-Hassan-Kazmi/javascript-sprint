@@ -2,7 +2,7 @@ const body = document.body
 const ul = document.createElement("ul")
 
 const previous = document.querySelector("#team-list-nav")
-if (previous !== null) {
+if (previous !== undefined) {
     previous.remove()
 }
 
