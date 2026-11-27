@@ -74,6 +74,7 @@ document.addEventListener("pointermove", (e) => {
             following.classList.add("trapped")
 
         } else if (cX <= window.innerWidth / 2 && following.classList.contains("trapped")) {
+            following.style.left = window.innerWidth / 2 + "px"
             following.classList.remove("follow")
         } else {
             color = document.documentElement.style.getPropertyValue("--white")
