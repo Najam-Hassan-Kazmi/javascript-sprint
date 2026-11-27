@@ -1,15 +1,15 @@
-const body = document.body
-const ul = document.createElement("ul")
-
-const previous = document.querySelector("#team-list-nav")
-if (previous) {
-    previous.remove()
-}
-
-ul.id = "team-list-nav"
-ul.classList.add("team-links")
-
 function createLinks(teams) {
+
+    const body = document.body
+    const ul = document.createElement("ul")
+
+    const previous = document.querySelector("#team-list-nav")
+    if (previous) {
+        previous.remove()
+    }
+
+    ul.id = "team-list-nav"
+    ul.classList.add("team-links")
 
     teams.forEach((team) => {
         const li = document.createElement("li")
@@ -27,10 +27,10 @@ function createLinks(teams) {
         li.append(a, span)
         ul.append(li)
     })
+
+    body.append(ul)
+
 }
-
-body.append(ul)
-
 
 // sample data added for testing
 const teams = [
