@@ -5,6 +5,11 @@ ul.classList.add("team-links")
 
 function createLinks(teams) {
 
+    const previous = document.querySelector("#team-list-nav")
+    if (previous) {
+        previous.remove()
+    }
+
     teams.forEach((team) => {
         const li = document.createElement("li")
         li.style.backgroundColor = team.primary
@@ -26,7 +31,7 @@ function createLinks(teams) {
 body.append(ul)
 
 
-
+// sample data added for testing
 const teams = [
     {
         "name": "Brazil",
