@@ -37,7 +37,7 @@ document.addEventListener("keydown", (e) => {
         keyDiv.style.position = "absolute"
         keyDiv.style.left = (cY) + "px"
         keyDiv.style.top = (cX) + "px"
-        keyDiv.style.transform = "translate(-55%, -55%)"
+        keyDiv.style.transform = "translate(-50%, -50%)"
         // keyDiv.style.alignItems = "center"
 
         div.append(keyDiv)
