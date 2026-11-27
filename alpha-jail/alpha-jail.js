@@ -41,7 +41,7 @@ document.addEventListener("keydown", (e) => {
         // keyDiv.style.alignItems = "center"
 
         div.append(keyDiv)
-        keyDiv.style.fontSize = "50px"
+        // keyDiv.style.fontSize = "50px"
         if (cX > window.innerWidth / 2) {
             color = document.documentElement.style.getPropertyValue("--orange")
             keyDiv.style.backgroundColor = color
