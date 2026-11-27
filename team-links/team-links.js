@@ -1,9 +1,11 @@
 const body = document.body
 const ul = document.createElement("ul")
+
 const previous = document.querySelector("#team-list-nav")
-if (previous) {
+if (previous !== null) {
     previous.remove()
 }
+
 ul.id = "team-list-nav"
 ul.classList.add("team-links")
 
