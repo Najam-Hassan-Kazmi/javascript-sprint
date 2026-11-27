@@ -14,7 +14,7 @@ const jailDiv = document.createElement("div")
 jailDiv.classList.add("inside", "zone")
 jailDiv.style.width = "50%"
 jailDiv.style.height = window.innerHeight + "px"
-let cX = 0, cY = 0
+let cY = 0, cX = 0
 let color
 
 document.documentElement.style.setProperty("--orange", "orange")
@@ -35,13 +35,24 @@ document.addEventListener("keydown", (e) => {
         let color = document.documentElement.style.getPropertyValue("--white")
         keyDiv.style.backgroundColor = color
         keyDiv.style.position = "absolute"
-        keyDiv.style.left = (cY) + "px"
-        keyDiv.style.top = (cX) + "px"
+        keyDiv.style.left = (cX) + "px"
+        keyDiv.style.top = (cY) + "px"
         keyDiv.style.transform = "translate(-50%, -50%)"
         // keyDiv.style.alignItems = "center"
 
         div.append(keyDiv)
         keyDiv.style.fontSize = "50px"
+        if (cX > window.innerWidth / 2) {
+            color = document.documentElement.style.getPropertyValue("--orange")
+            keyDiv.style.backgroundColor = color
+            keyDiv.classList.add("trapped")
+
+        } else if (cX <= window.innerWidth / 2 && following.classList.contains("trapped")) {
+            keyDiv.classList.remove("follow")
+        } else {
+            color = document.documentElement.style.getPropertyValue("--white")
+            keyDiv.style.backgroundColor = color
+        }
     } else if (ch == "Escape") {
         const elements = document.querySelectorAll(".character")
         elements.forEach(e => {
@@ -51,18 +62,18 @@ document.addEventListener("keydown", (e) => {
 })
 
 document.addEventListener("pointermove", (e) => {
-    cX = e.clientY, cY = e.clientX
+    cY = e.clientY, cX = e.clientX
     const following = document.querySelector(".follow")
     if (following) {
-        following.style.left = cY + "px"
-        following.style.top = cX + "px"
+        following.style.left = cX + "px"
+        following.style.top = cY + "px"
 
-        if (cY > window.innerWidth / 2) {
+        if (cX > window.innerWidth / 2) {
             color = document.documentElement.style.getPropertyValue("--orange")
             following.style.backgroundColor = color
             following.classList.add("trapped")
 
-        } else if (cY <= window.innerWidth / 2 && following.classList.contains("trapped")) {
+        } else if (cX <= window.innerWidth / 2 && following.classList.contains("trapped")) {
             following.classList.remove("follow")
         } else {
             color = document.documentElement.style.getPropertyValue("--white")
